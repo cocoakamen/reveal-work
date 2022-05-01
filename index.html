@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal-work</title>
+
+		<link rel="stylesheet" href="lib/reveal.js/4.3.1/reset.css">
+		<link rel="stylesheet" href="lib/reveal.js/4.3.1/reveal.css">
+		<link rel="stylesheet" href="lib/reveal.js/plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="lib/reveal.js/plugin/customcontrols/style.css">
+		<link rel="stylesheet" href="lib/reveal.js/my-theme/test.css">
+    <!--
+    <link rel="stylesheet" href="lib/reveal.js/4.3.1/theme/simple.css">
+
+-->
+
+<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="lib/reveal.js/plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h1>revleal.js</h1>
+					<div class="chara-desc" style="height:60vh">
+						<div class="mogura"></div>
+						<div>オレオレテンプレート</div>
+					</div>
+				</section>
+
+        <section>
+          <h2>fragment</h2>
+					<div class="chara-desc">
+						<div class="mogura fragment"></div>
+						<div class="fragment">オレオレfragment</div>
+					</div>
+        </section>
+
+				<section>
+					<h2>Built-in Plugins</h2>
+					<div class="chara-desc">
+						<div class="mogura"></div>
+						<div>
+							mdを使わない強い決意
+							<ul>
+								<li>highlight</li>
+								<li>notes</li>
+								<li>zoom</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>Third Party Plugins</h2>
+					<div class="chara-desc">
+						<div class="mogura"></div>
+						<div>
+							オペレーション助ける系
+							<ul>
+								<li>menu</li>
+								<li>chalkboard</li>
+								<li>customboard</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+
+			</div>
+		</div>
+
+		<script src="lib/reveal.js/4.3.1/reveal.js"></script>
+		<script src="lib/reveal.js/plugin/highlight/highlight.js"></script>
+		<script src="lib/reveal.js/plugin/zoom/zoom.js"></script>
+		<script src="lib/reveal.js/plugin/notes/notes.js"></script>
+    <script src="lib/reveal.js/plugin/menu/menu.js"></script>
+		<script src="lib/reveal.js/plugin/chalkboard/plugin.js"></script>
+		<script src="lib/reveal.js/plugin/customcontrols/plugin.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				width: 1025,
+				hash: true,
+        slideNumber: 'c/t' ,
+				// Vertical centering of slides
+  			center: false,
+				
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealHighlight, RevealZoom, RevealNotes, RevealMenu, RevealChalkboard, RevealCustomControls ],
+
+				customcontrols: {
+					controls: [
+						{
+							id: 'toggle-overview',
+							title: 'Toggle overview (O)',
+							icon: '<i class="fa fa-th"></i>',
+							action: 'Reveal.toggleOverview();'
+						},
+						{ icon: '<i class="fa fa-pen-square"></i>',
+							title: 'Toggle chalkboard (B)',
+							action: 'RevealChalkboard.toggleChalkboard();'
+						},
+						{ icon: '<i class="fa fa-pen"></i>',
+							title: 'Toggle notes canvas (C)',
+							action: 'RevealChalkboard.toggleNotesCanvas();'
+					  }
+					]
+				},
+
+				menu:{
+					width: 'wide',
+
+				}
+			});
+		</script>
+	</body>
+</html>
